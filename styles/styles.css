@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.sketchpad {
+    height: 50vh;
+    width: 50vw;
+    border: 2px solid black;  
+}
