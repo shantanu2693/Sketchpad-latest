@@ -2,10 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    height: 100vh;
 }
 
 .sketchpad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50vh;
     width: 50vw;
     border: 2px solid black;  
