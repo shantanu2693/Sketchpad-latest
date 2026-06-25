@@ -7,9 +7,16 @@
 
 .sketchpad {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 50vh;
     width: 50vw;
-    border: 2px solid black;  
+    border: 5px solid black;  
+}
+
+.button {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: black;
+    background-color: lightblue;
 }
