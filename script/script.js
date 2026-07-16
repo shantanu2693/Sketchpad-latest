@@ -32,8 +32,9 @@ function createGrid(size) {
 }
 
 function changeCellColor(event) {
-    event.target.style.backgroundColor = 'black';
-}
+    event.target.style.backgroundColor = `#${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0')}`;
+};
+
 
 
 let grid_size = 0; // Global variable to store the grid size
