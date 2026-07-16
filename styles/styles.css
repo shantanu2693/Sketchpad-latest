@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 50vh;
-    width: 50vw;
+    height: 70vh;
+    width: 70vw;
     border: 2px solid black;  
 }
 
@@ -19,4 +19,5 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
 }
