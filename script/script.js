@@ -5,7 +5,7 @@ function getGridSize() {
         return;
     }
     createGrid(grid_size);
-}
+};
 
 function createGrid(size) {
     const sketchpad = document.querySelector('.sketchpad');
@@ -21,23 +21,29 @@ function createGrid(size) {
         sketchpad.appendChild(row);
 
         for (let j = 0; j < size; j++) {
-            const cell = document.createElement('div');
-            cell.addEventListener('mouseover', changeCellColor);
-            cell.style.flex = '1 0 auto';
-            cell.style.border = '0.25px dashed grey';
-            cell.style.boxSizing = 'border-box';
-            row.appendChild(cell);
+            const cell_outer = document.createElement('div');
+            const cell_inner = document.createElement('div');
+
+            cell_outer.style.border = '0.25px dashed grey';
+            cell_outer.style.display = 'flex';
+            cell_outer.style.flex = '1 0 auto';
+            cell_outer.style.boxSizing = 'border-box';
+
+            cell_inner.style.opacity = '0.0';
+            cell_inner.addEventListener('mouseover', changeCellColor);
+            cell_inner.style.flex = '1 0 auto';
+            cell_inner.style.boxSizing = 'border-box';
+            
+            row.appendChild(cell_outer);
+            cell_outer.appendChild(cell_inner);
         }
     }
-}
-
-function changeCellColor(event) {
-    event.target.style.backgroundColor = `#${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0')}`;
 };
 
-
-
-let grid_size = 0; // Global variable to store the grid size
+function changeCellColor(event) {
+    event.target.style.backgroundColor = `black`;
+    event.target.style.opacity = `${parseFloat(event.target.style.opacity) + 0.1}`;
+};
 
 document.querySelector('#input_button').addEventListener('click', getGridSize)
 
